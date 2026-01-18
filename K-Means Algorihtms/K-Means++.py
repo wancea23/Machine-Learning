@@ -17,7 +17,7 @@ for _ in range(n_samples):
 centroids = []
 centroids.append(random.choice(X))  #C1
 
-print("Initial Centroid:")
+print("\nInitial Centroid:")
 print(centroids)
 
 #finds the distance from each point to C1
@@ -34,16 +34,47 @@ for point in X:
 distances_squared = []
 for d in distances:
     distances_squared.append(d**2)
-print("Squared Distances:")
+print("\nSquared Distances:")
 print(distances_squared)
 
 total = sum(distances_squared)
-print("Total of Squared Distances:")
+print("\nTotal of Squared Distances:")
 print(total)
 
 probabilities = []
 for d2 in distances_squared:
     probabilities.append(d2 / total)
 
-print("Probabilities being the new Centroid:")
+print("\nProbabilities being the new Centroid:")
 print(probabilities)
+
+
+r = random.uniform(0, 1)
+cumulative_probability = 0.0
+
+#Select the second centroid based on the probability distribution
+for i in range(len(X)):
+    cumulative_probability += probabilities[i]
+    if r <= cumulative_probability:
+        centroids.append(X[i])  #C2
+        break
+
+print("\nSelected Centroid:")
+print(centroids)
+
+clusters=[[] for _ in range(n_clusters)]
+
+#Assign points to clusters
+for point in X:
+    closest_index = 0
+    min_dist = float('inf')
+    for i in range(len(centroids)):
+        d = distance(point, centroids[i])
+        if d < min_dist:
+            min_dist = d
+            closest_index = i
+    clusters[closest_index].append(point)
+
+print("\nClusters:")
+for i, cluster in enumerate(clusters):
+    print(f"Cluster {i}: {cluster}")

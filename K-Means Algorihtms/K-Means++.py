@@ -9,3 +9,9 @@ er = 0.0001
 X = []
 for _ in range(n_samples):
     X.append((random.uniform(0, x_range), random.uniform(0, y_range)))
+
+centroids = []
+centroids.append(random.choice(X))
+
+print("Initial Centroid:")
+print(centroids)

@@ -1,5 +1,6 @@
 import random
 import math
+import matplotlib.pyplot as plt
 
 def distance(p, c):
     return math.sqrt((p[0] - c[0])**2 + (p[1] - c[1])**2)
@@ -93,3 +94,24 @@ print(centroids)
 print("\nClusters:")
 for i, cluster in enumerate(clusters):
     print(f"Cluster {i}: {cluster}")
+
+# -----------------------------
+# PLOT THE RESULT WITH COLORS
+# -----------------------------
+colors = []
+for _ in range(n_clusters):
+    colors.append((random.random(), random.random(), random.random()))
+
+for i, cluster in enumerate(clusters):
+    if cluster:
+        plt.scatter([p[0] for p in cluster], [p[1] for p in cluster], color=colors[i], label=f"Cluster {i}")
+
+# Plot centroids
+plt.scatter([c[0] for c in centroids], [c[1] for c in centroids],
+            color='red', marker='x', s=100, label="Centroids")
+
+plt.title("KMeans++ Clustering")
+plt.xlabel("X")
+plt.ylabel("Y")
+plt.legend()
+plt.show()

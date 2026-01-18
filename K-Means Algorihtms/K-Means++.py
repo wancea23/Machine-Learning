@@ -17,6 +17,10 @@ for _ in range(n_samples):
 centroids = []
 centroids.append(random.choice(X))  #C1
 
+print("Initial Centroid:")
+print(centroids)
+
+#finds the distance from each point to C1
 distances = []
 for point in X:
     min_dist = float('inf')
@@ -26,5 +30,20 @@ for point in X:
             min_dist = d
     distances.append(min_dist)
 
-#print("Initial Centroid:")
-#print(centroids)
+#Probability Distribution
+distances_squared = []
+for d in distances:
+    distances_squared.append(d**2)
+print("Squared Distances:")
+print(distances_squared)
+
+total = sum(distances_squared)
+print("Total of Squared Distances:")
+print(total)
+
+probabilities = []
+for d2 in distances_squared:
+    probabilities.append(d2 / total)
+
+print("Probabilities being the new Centroid:")
+print(probabilities)

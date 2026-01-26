@@ -16,3 +16,15 @@
   - Cumulative probability scanning mechanism
   - Convergence logic and movement threshold
 - Visual examples created for probability distributions and cluster evolution
+
+## 2026-01-23
+- Played, explained and displayed examples of usage of K-Means Algorithms
+
+## 2026-01-25
+### Supervised Learning
+- Explained the introduction of the supervised learning
+- Explained what is Linear Regression
+- Used and exaplined mathematical terms
+
+## 2026-01-25
+- Explained what is Loss and types of loss functions

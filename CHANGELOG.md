@@ -26,5 +26,6 @@
 - Explained what is Linear Regression
 - Used and exaplined mathematical terms
 
-## 2026-01-25
-- Explained what is Loss and types of loss functions
+## 2026-01-28
+- Explained what is Gradient Descent
+- Exlpained on a deeper level the math behind the Gradient Descent Convergence

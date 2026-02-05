@@ -29,3 +29,12 @@
 ## 2026-01-28
 - Explained what is Gradient Descent
 - Exlpained on a deeper level the math behind the Gradient Descent Convergence
+
+## 2026-02-4
+- Explained what are Hyperparameters in Linear Regression
+- Explained what is SGD, BATCH and Epochs
+- Did some analysis and comparison between these paramters
+
+## 2026-02-5
+### Learnning Libraries
+- Understood the fundamentals of NumPy

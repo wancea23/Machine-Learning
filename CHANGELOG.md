@@ -38,3 +38,6 @@
 ## 2026-02-5
 ### Learnning Libraries
 - Understood the fundamentals of NumPy
+
+## 2026-02-6
+- Understood the fundamentals of Pandas

@@ -36,8 +36,16 @@
 - Did some analysis and comparison between these paramters
 
 ## 2026-02-5
-### Learnning Libraries
+### Learning Libraries
 - Understood the fundamentals of NumPy
 
 ## 2026-02-6
 - Understood the fundamentals of Pandas
+
+## 2026-02-8
+- Understood the fundamentals of Matplotlib
+
+## 2026-02-9
+### Chicago Taxi Fare Prediction Model
+- Created the visuals in order to pick the best feature
+- Picked Trip_Miles

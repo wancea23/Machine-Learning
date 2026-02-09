@@ -3,6 +3,7 @@
 ## [Unreleased]
 
 ## 2026-01-18
+### Notion Journaling
 - Added K-Means++ algorithm in Python.
 - Added the code to documentation for the project.
 - Improved and modified documentation.
@@ -21,7 +22,7 @@
 - Played, explained and displayed examples of usage of K-Means Algorithms
 
 ## 2026-01-25
-### Supervised Learning
+### Supervised Learning Documented
 - Explained the introduction of the supervised learning
 - Explained what is Linear Regression
 - Used and exaplined mathematical terms

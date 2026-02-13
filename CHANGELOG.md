@@ -50,3 +50,10 @@
 ### Chicago Taxi Fare Prediction Model
 - Created the visuals in order to pick the best feature
 - Picked Trip_Miles
+
+## 2026-02-13
+- Learned the concept of PyTorch library and tensors
+- Created a NumPy implementation for the Chicago Taxi Fare Prediction Model of linear regression with manual gradient descent (full batch, fixed iterations)
+- Created a PyTorch implementation for the Chicago Taxi Fare Prediction Model with automatic differentiation and dynamic convergence detection
+- Implemented GPU acceleration support with automatic fallback to CPU
+- Achieved final model: FARE = 2.2795 * TRIP_MILES + 5.0000 with MSE = 14.0254

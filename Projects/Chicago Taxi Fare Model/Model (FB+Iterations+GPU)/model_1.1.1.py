@@ -8,7 +8,7 @@ print(f"Using device: {device}")
 if device.type == "cuda":
     print(f"GPU: {torch.cuda.get_device_name(0)}")
 
-df = pd.read_csv(r'C:\Users\johns\OneDrive\Code\Python\ML\Projects\Chicago Taxi Fare Model\Dataset\chicago_taxi_train.csv')
+df = pd.read_csv(r'C:\Users\wance\OneDrive\Code\Python\ML\Projects\Chicago Taxi Fare Model\Dataset\chicago_taxi_train.csv')
 
 # 1. Copying the data from the NumPy array to that memory
 # 2. Converting to the specified dtype (float32)
@@ -29,7 +29,10 @@ err = 0.000001
 i = 0
 mse_history = []
 
-print(f"Training on {torch.cuda.get_device_name(0)} with PyTorch (YOUR logic):")
+if device.type == "cuda":
+    print(f"Training on {torch.cuda.get_device_name(0)} with PyTorch:")
+else:
+    print("Training on CPU with PyTorch:")
 print("-" * 60)
 
 while True:
@@ -85,7 +88,7 @@ fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5))
 ax1.scatter(x_cpu, y_cpu, color='blue', label='Actual', alpha=0.5, s=10)
 x_line = np.array([x_cpu.min(), x_cpu.max()])
 y_line = w.item() * x_line + b.item()
-ax1.plot(x_line, y_line, 'r-', linewidth=2, label=f'Fitted line: y = {w.item():.2f}x + {b.item():.2f}')
+ax1.plot(x_line, y_line, 'r-', linewidth=2, label=f'Fitted line: y = {w.item():.4f}x + {b.item():.4f}')
 ax1.set_xlabel('Trip Miles')
 ax1.set_ylabel('Fare ($)')
 ax1.set_title('Taxi Fare vs Trip Miles')
@@ -101,3 +104,23 @@ ax2.set_yscale('log')
 
 plt.tight_layout()
 plt.show()
+
+# Check Random 10 predictions
+print("\n")
+print("-" * 60)
+print("Random 100 predictions:")
+print("-" * 60)
+
+sumerr = 0.0
+
+with torch.no_grad():
+    random_indices = torch.randint(0, len(x), (100,))
+    for i in random_indices:
+        x_val = x[i].item()
+        y_true = y[i].item()
+        y_pred = w.item() * x_val + b.item()
+        sumerr += abs(y_true - y_pred)
+        print(f"TRIP_MILES: {x_val:.2f}, Actual FARE: {y_true:.2f}$, Predicted FARE: {y_pred:.2f}$, Error: {abs(y_true - y_pred):.2f}$")
+
+print("\nAverage Error on 100 random samples: {:.2f}$".format(sumerr / 100))
+print("Average error on the predicted model (RMSE): {:.2f}$".format(np.sqrt(mse_history[-1])))

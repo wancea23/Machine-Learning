@@ -458,7 +458,7 @@ Average Error on 10 random samples: 0.92$
 RMSE: 3.51$
 ```
 
-![Data_set_visualization](Images/Figure_1.1.2err.png)
+![Data_set_visualization](Images/Figure_1.1.2.err.png)
 
 #### This means:
 

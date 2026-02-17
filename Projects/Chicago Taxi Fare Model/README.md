@@ -188,7 +188,7 @@ Average Error on 10 random samples: 3.51$
 RMSE: 5.52$
 ```
 
-![Data_set_visualization](Images\Figure_1.png)
+![Data_set_visualization](ML\Projects\Chicago Taxi Fare Model\Images\Figure_1.png)
 
 
 #### This means:

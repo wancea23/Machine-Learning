@@ -53,7 +53,15 @@
 
 ## 2026-02-13
 - Learned the concept of PyTorch library and tensors
-- Created a NumPy implementation for the Chicago Taxi Fare Prediction Model of linear regression with manual gradient descent (full batch, fixed iterations)
-- Created a PyTorch implementation for the Chicago Taxi Fare Prediction Model with automatic differentiation and dynamic convergence detection
+- Created Model_0.1, a very primitive Linear Regression Algorithm using only python logic and numpy
+- Learned fundamentals of TorchPy and CPU / GPU acceleration and memory allocation
+- Created Model_1.1.1, using only one feature (TRIP_MILES)
 - Implemented GPU acceleration support with automatic fallback to CPU
 - Achieved final model: FARE = 2.2795 * TRIP_MILES + 5.0000 with MSE = 14.0254
+
+## 2026-02-16
+- Created Model_1.1.5, using all 5 features (TRIP_MILES, TRIP_SECONDS, TRIP_SPEED, TIPS, TIP_RATE)
+- Created Model_1.1.3, using 3 features (TRIP_MILES, TRIP_SECONDS, TRIP_SPEED)
+- Created Model_1.1.2, using 2 features (TRIP_MILES, TRIP_SECONDS)
+- Created Model_NVD, using 2 features (TRIP_MILES, TRIP_SECONDS), that analyzes the fare on day time and night time
+- Analyzed all models and drew conclusions

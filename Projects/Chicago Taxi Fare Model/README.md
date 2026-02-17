@@ -50,7 +50,7 @@ Place the `chicago_taxi_train.csv` file in the following path or update the path
 ```
 ...\ML\Projects\Chicago Taxi Fare Model\Dataset\chicago_taxi_train.csv
 ```
-![Data_set_visualization](Images\mpl.png)
+![Data_set_visualization](Images/mpl.png)
 
 ## Program Variations
 
@@ -101,7 +101,7 @@ Final model: FARE = 2.2795 * TRIP_MILES + 5.0000
 Final MSE: 14.0254
 ```
 
-![Data_set_visualization](Images\Figure_1.1.1.png)
+![Data_set_visualization](Images/Figure_1.1.1.png)
 
 
 #### This means:
@@ -188,7 +188,7 @@ Average Error on 10 random samples: 3.51$
 RMSE: 5.52$
 ```
 
-![Data_set_visualization](ML\Projects\Chicago Taxi Fare Model\Images\Figure_1.png)
+![Data_set_visualization](Images/Figure_1.png)
 
 
 #### This means:
@@ -278,7 +278,7 @@ Average Error on 10 random samples: 2.52$
 RMSE: 4.10$
 ```
 
-![Data_set_visualization](Images\Figure_1.3.png)
+![Data_set_visualization](Images/Figure_1.3.png)
 
 #### This means:
 
@@ -364,7 +364,7 @@ Average Error on 10 random samples: 0.87$
 RMSE: 3.61$
 ```
 
-![Data_set_visualization](Images\Figure_1.1.2.png)
+![Data_set_visualization](Images/Figure_1.1.2.png)
 
 #### This means:
 
@@ -458,7 +458,7 @@ Average Error on 10 random samples: 0.92$
 RMSE: 3.51$
 ```
 
-![Data_set_visualization](Images\Figure_1.1.2err.png)
+![Data_set_visualization](Images/Figure_1.1.2err.png)
 
 #### This means:
 
@@ -545,7 +545,7 @@ Final MSE            10.7496         19.1927         +8.4431
 RMSE                 $3.28           $4.38           $+1.10
 ```
 
-![Data_set_visualization](Images\nvd.png)
+![Data_set_visualization](Images/nvd.png)
 
 #### This means:
 
